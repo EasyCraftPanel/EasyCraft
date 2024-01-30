@@ -1,0 +1,6 @@
+@EasyCraft.Daemon_HostAddress = http://localhost:5082
+
+GET {{EasyCraft.Daemon_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
