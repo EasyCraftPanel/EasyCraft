@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <Version>0.0.1</Version>
+        <Authors>EasyCraft</Authors>
+        <Description>EasyCraft 示例插件</Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\refs\EasyCraft.PluginLoader.Abstraction\EasyCraft.PluginLoader.Abstraction.csproj" />
+    </ItemGroup>
+
+</Project>

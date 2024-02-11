@@ -8,13 +8,21 @@
 
     <ItemGroup>
       <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
-      <PackageReference Include="NuGet.Commands" Version="6.8.0" />
-      <PackageReference Include="NuGet.Common" Version="6.8.0" />
-      <PackageReference Include="NuGet.DependencyResolver.Core" Version="6.8.0" />
-      <PackageReference Include="NuGet.LibraryModel" Version="6.8.0" />
-      <PackageReference Include="NuGet.PackageManagement" Version="6.8.0" />
-      <PackageReference Include="NuGet.Packaging.Core" Version="6.8.0" />
-      <PackageReference Include="NuGet.Protocol" Version="6.8.0" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="NuGet.PackageManagement" Version="6.8.0" />
+        <PackageReference Include="NuGet.Common" Version="6.8.0"  />
+        <PackageReference Include="NuGet.Commands" Version="6.8.0"  />
+        <PackageReference Include="NuGet.Credentials" Version="6.8.0"  />
+        <PackageReference Include="NuGet.Configuration" Version="6.8.0"  />
+        <PackageReference Include="NuGet.DependencyResolver.Core" Version="6.8.0"  />
+        <PackageReference Include="NuGet.Frameworks" Version="6.8.0"  />
+        <PackageReference Include="NuGet.LibraryModel" Version="6.8.0"  />
+        <PackageReference Include="NuGet.Packaging.Core" Version="6.8.0"  />
+        <PackageReference Include="NuGet.Packaging" Version="6.8.0"  />
+        <PackageReference Include="NuGet.ProjectModel" Version="6.8.0"  />
+        <PackageReference Include="NuGet.Protocol" Version="6.8.0"  />
+        <PackageReference Include="NuGet.Versioning" Version="6.8.0"  />
     </ItemGroup>
 
     <ItemGroup>

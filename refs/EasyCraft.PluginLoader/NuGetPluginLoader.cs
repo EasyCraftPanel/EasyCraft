@@ -34,9 +34,14 @@ public class NuGetPluginLoader : IPluginLoader
     public async Task<bool> UpdatePluginAsync(string id, string version = "latest",
         CancellationToken cancellationToken = default)
     {
-        var package = await _nuGetIntegrator.GetPackageAsync(id, version, cancellationToken);
-        if (!package.Exists) return false;
-        return await _nuGetIntegrator.InstallPackageAsync(id, package.LatestVersion.ToString(), cancellationToken);
+        if (version == "latest")
+        {
+            var package = await _nuGetIntegrator.GetPackageLatestVersionAsync(id, cancellationToken);
+            if (!package.Exists) return false;
+            version = package.LatestVersion.ToString();
+        }
+
+        return await _nuGetIntegrator.InstallPackageAsync(id, version, cancellationToken);
     }
 
     public async Task<List<Type>> LoadPluginAsync(string id, CancellationToken cancellationToken = default)
@@ -73,7 +78,6 @@ public class NuGetPluginLoader : IPluginLoader
     public async Task<Dictionary<string, string>> GetInstalledPluginsAsync(
         CancellationToken cancellationToken = default)
     {
-        var installed = await _nuGetIntegrator.GetAllInstalledPackagesAsync(cancellationToken);
-        return installed.ToDictionary(package => package.Id, package => package.Version.ToString());
+        return await _nuGetIntegrator.GetAllInstalledPackagesAsync(cancellationToken);
     }
 }
